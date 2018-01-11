@@ -34,3 +34,13 @@ for(let i in peopleSalary[x] )
 }
 
 console.log(peopleSalaryarray);
+//let newpeoplesalary=[];
+// let nextslary=[];
+// for(let j=0;j<3;j++)
+// {
+//   let oldsalary = j==0 ? row['salary'] : nextslary[j-1]
+//   let addOnsalary=Math.round(oldsalary*10/100);
+//   nextslary[j]=j==0 ? oldsalary :oldsalary+addOnsalary;
+// }
+// row['salary']=nextslary;
+// newpeoplesalary.push(rows)

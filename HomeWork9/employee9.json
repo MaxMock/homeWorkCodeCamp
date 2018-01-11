@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1001,
+        "firstname": "Luke",
+        "lastname": "Skywalker",
+        "salary": 40000,
+        "role": "Programmer",
+        "type": "frontend"
+    },
+    {
+        "id": 1002,
+        "firstname": "Tony",
+        "lastname": "Stark",
+        "salary": 1000000,
+        "role": "CEO",
+        "dressCode": "tshirt"
+    },
+    {
+        "id": 1003,
+        "firstname": "Cinderella",
+        "lastname": "Disney",
+        "salary": 20000,
+        "role": "OfficeCleaner",
+        "dressCode": "maid"
+    },
+    {
+        "id": 1004,
+        "firstname": "Monkey D",
+        "lastname": "Luffee",
+        "salary": 9000000,
+        "role": "Programmer",
+        "type": "backend"
+    },
+    {
+        "id": 1005,
+        "firstname": "Miku",
+        "lastname": "Live",
+        "salary": 20000,
+        "role": "OfficeCleaner",
+        "dressCode": "normal"
+    }
+]

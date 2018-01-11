@@ -1,6 +1,6 @@
 let fs = require('fs');
 let  obj={};
-let arr=[];
+
 fs.readFile('employee.txt','utf8',function(err, data)
  { 
 
@@ -11,3 +11,4 @@ for(let i=0;i<obj.length;i++)
    }
    
 }); 
+
