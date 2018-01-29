@@ -10,17 +10,31 @@ class App extends Component {
 
     this.state = {
       username : '',
-      password : ''
+      password : '',
+      total : ''
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangePassword = this.handleChangePassword.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
 
   }
 
   handleChange(event) {
     this.setState({username: event.target.value});
-    console.log("ค่าที่พิมพ์มา" + event.target.value);
-    console.log("ค่าใน State" + this.state.username);
+  }
+
+  handleChangePassword(event) {
+    this.setState({password: event.target.value});
+    console.log(this.state.password);
+  }
+
+  handleOnClick(event) {
+    let temp = ''
+    //temp = +this.state.username + +this.state.password;
+
+    temp = parseInt(this.state.username) + parseInt(this.state.password);
+    this.setState({total : temp});
   }
 
   render() {
@@ -37,10 +51,16 @@ class App extends Component {
                      />
                 </Form.Item>
                 <Form.Item>
-                    <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+                    <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                      type="password" placeholder="Password"
+                      value={this.state.password}
+                      onChange={this.handleChangePassword}
+                      />
                 </Form.Item>
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
+                    <Button type="primary" htmlType="submit" className="login-form-button"
+                      onClick={this.handleOnClick}
+                      >
                       Sign in
                     </Button>
                     <a className="login-form-forgot" href="">Forgot password</a>
@@ -52,7 +72,7 @@ class App extends Component {
                     </Button>
                 </Form.Item>
               </Form>
-              Total is .....
+              Total is ..... {this.state.total}
             </Card>
         </div>
     );

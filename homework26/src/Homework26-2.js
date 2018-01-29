@@ -1,83 +1,29 @@
-import Head from 'next/head'
-import { Menu, Carousel, Card, Row, Col, Rate } from 'antd'
-export default () => (
-  <div>
-    <Head>
-     
-    </Head>
-    <div className="header" >
+import './homework26-2.css';
+import { Layout, Menu, Breadcrumb } from 'antd';
+const { Header, Content, Footer } = Layout;
+<Layout className="layout">
+    <Header>
+      <div className="logo" />
       <Menu
-        mode="horizontal"
         theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['2']}
+        style={{ lineHeight: '64px' }}
       >
-        <Menu.Item key="product">
-          <h3>Product</h3>
-        </Menu.Item>
-        <Menu.Item key="About">
-          <h3>About</h3>
-        </Menu.Item>
+        <Menu.Item key="1">nav 1</Menu.Item>
+        <Menu.Item key="2">nav 2</Menu.Item>
+        <Menu.Item key="3">nav 3</Menu.Item>
       </Menu>
-    </div>
-    <div className="content">
-      <Carousel autoplay>
-        <div><h3>1</h3></div>
-        <div><h3>2</h3></div>
-        <div><h3>3</h3></div>
-        <div><h3>4</h3></div>
-      </Carousel>
-      <div className="gutter-example">
-        <Row gutter={16}>
-          <Col span={6}>
-            <Card>
-              <div className="custom-image">
-                <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-              </div>
-              <div className="custom-card">
-                <h3>Europe Street beat</h3>
-                <p>www.instagram.com</p>
-                <p><Rate /></p>
-              </div>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card>
-              <div className="custom-image">
-                <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-              </div>
-              <div className="custom-card">
-                <h3>Europe Street beat</h3>
-                <p>www.instagram.com</p>
-                <p><Rate /></p>
-              </div>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card>
-              <div className="custom-image">
-                <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-              </div>
-              <div className="custom-card">
-                <h3>Europe Street beat</h3>
-                <p>www.instagram.com</p>
-                <p><Rate /></p>
-              </div>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card>
-              <div className="custom-image">
-                <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-              </div>
-              <div className="custom-card">
-                <h3>Europe Street beat</h3>
-                <p>www.instagram.com</p>
-                <p><Rate /></p>
-              </div>
-            </Card>
-          </Col>
-        </Row>
-      </div>
-    </div>
-   
-  </div>
-)
+    </Header>
+    <Content style={{ padding: '0 50px' }}>
+      <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+      <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>
+      Ant Design ©2016 Created by Ant UED
+    </Footer>
+  </Layout>
