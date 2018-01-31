@@ -1,0 +1,47 @@
+<!-- <%- message %> -->
+<style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+           background-color:#fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+   
+        </style>
+
+        <table id="t01">
+                <tr>
+                        <th>ID</th>
+                  <th>Firstname</th>
+                  <th>Lastname</th> 
+                  <th>username</th>
+                
+                </tr>
+                <% user.forEach(function(user) { %>
+                <tr>
+                        <td><%= user.id %></td>
+                  <td><%= user.firstName %></td>
+                  <td><%= user.lastName %></td>
+                  <td><%= user.username %></td>
+
+                </tr>
+                <% }); %>
+              </table>
+
+              <!-- <ul>
+    <% user.forEach(function(user) { %>
+ <td><%= user.firstname %>,<%= user.lastname %>,<%= user.salary %>,<%= user.role %></td>
+    <% }); %>
+</ul> -->

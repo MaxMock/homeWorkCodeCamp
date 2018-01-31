@@ -1,0 +1,1 @@
+export { templateBinder } from './templateBinder'

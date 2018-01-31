@@ -18,8 +18,10 @@ module.exports=function(app){
   app.use(async (ctx, next) => {
     try
     {
-      let alluserrows = await getdata.getalluser();
+      let newarr=[];
+      let alluserrows = await getdata.getalluser(1001);
       await ctx.render('./homework10_1', {"message":"","user":alluserrows});
+   
       await next();
     }
     catch (err)

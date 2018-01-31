@@ -1,0 +1,21 @@
+
+<div class="col-sm-3" id= {{isbn}}>
+<div class="csscard Card" id= {{cardid}} >
+  <p hidden><label id= {{bookids}}>{{BookId}}</label></p>
+<p><h1 id= {{cardTitleisbn}} >{{title}}</h1></p>
+  <img class="card-img-top" id= {{inputimg_isbn}} src= {{imageUrl}} alt="Card image cap">
+  <div class="card-body">
+      <p hidden><label for="PromotionDate" id= {{PromotionDate_isbn}} style="padding-right:5px"> {{PromotionDate}} </label>          
+  <p>Price :<label for="price" id= {{price_isbn}} style="padding-right:5px">{{price}}</label>$
+    <button type="button" name="btnedit" onclick= {{editisbn}} data-id="1" class="btn btn-success "   data-toggle="modal" data-target="#myModal" >
+       Edit
+       <span class="glyphicon glyphicon-wrench" style="color:white"></span>
+    </button>
+          <button type="button" name="btndelete" onclick= {{deletecardisbn}}  data-id="1" class="btn btn-danger btndelete" >
+       Delete
+       <span class="glyphicon glyphicon-trash" style="color:white"></span>
+    </button>
+    </p>  
+  </div>
+</div>
+</div>

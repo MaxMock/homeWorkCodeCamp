@@ -1,0 +1,51 @@
+<!-- <%- message %> -->
+<style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+           background-color:#fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+   
+        </style>
+
+
+              <!-- <ul>
+    <% user.forEach(function(user) { %>
+ <td><%= user.firstname %>,<%= user.lastname %>,<%= user.salary %>,<%= user.role %></td>
+    <% }); %>
+</ul> -->
+<% <!doctype html> %>
+<%  <input id=input><br>%>
+<% <button onclick=send()>Submit</button>%>
+<% <div id=result></div>%>
+<% <script src=http://localhost:3000/socket.js></script>%>
+<% <script>%>
+<%= var socket = io('ws://localhost:3000')%>
+<%= var input = document.querySelector('#input')%>
+<%= var result = document.querySelector('#result')%>
+<% =socket.on('connect', () => {%>
+    <% =result.innerHTML += '<p>connected</p>'%>
+    <% =})%>
+    <% =socket.on('message', (data) => {%>
+        <% =result.innerHTML += '<p>server: ' + data + '</p>'%>
+        <% =})%>
+        <% =function send () {%>
+            <%= var data = input.value%>
+            <%= input.value = ''%>
+            <%= result.innerHTML += '<p>send: ' + data + '</p>'%>
+            <%= socket.send(data)%>
+            <%= }%>
+            <%= </script>%>

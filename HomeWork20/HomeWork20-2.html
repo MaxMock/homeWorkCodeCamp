@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+        <style>
+            .container{
+                 width: 450px;
+                 margin: auto;
+             }
+             legend{
+                 background-color: #4286f4
+             }
+             input[type="text"], input[type="file"]
+           {
+               width: 60%;
+               float: right;
+
+           }
+           textarea{
+               float: right;
+               width: 60%;
+           }
+           select{
+               float: right;
+               width: 61%;
+           }
+      
+           #paction
+           {
+            float: right;
+            margin-right: 45%;
+           }
+           #btn{
+               margin-top: 10%;
+               text-align: center;
+
+           }
+           input[type="submit"]
+           {
+               margin-right: 10%;
+               background-color:#6fa1f2;
+               font-size: 20px;
+               color:white;
+               border-radius: 15%;
+           }
+           #img{
+               width: 30%;
+               float: none;
+               margin-left: 16%;
+           }  
+           .btnimg{
+               width: 15%;
+               margin-left: 5%;
+           }     
+     </style>
+<body>
+<div class="container">
+ <fieldset>
+  <legend>Creat a Product</legend>
+  <p><label>Product code</label><input type="text" placeholder="Product code"></p>
+  <p><label>Product Name</label><input type="text" placeholder="Product Name"></p>
+  <p><label>Product Category</label><select><option value="Shrit">Shrit</option></select></p>
+  <p><label>Product Type</label><select><option value="OverCoat">OverCoat</option></select></p>
+  <p><label>Currency Price</label><select><option value="THB">THB</option></select></p>
+  <p><label>Standard Price</label><select><option value="Standard Price">Standard Price</option></select></p>
+  <p><label>Standard Unit</label><select><option value="Piece">Piece</option></select></p>
+  <p><label>Description</label><textarea name="area" >Description</textarea></p><br>
+  <p ><label>Product Image</label><input type="text" id="img" placeholder="Image"><input type="submit" class="btnimg" value="..." ></button></p>
+  <p id="paction"><input type="checkbox" name="active"  value="Active"><label id="lb1" >Active</label></p><br>
+  <p id="btn"><input type="submit" value="Save"><input type="submit" value="Close"></p>
+ </fieldset>
+</div>
+
+</body>
+</html>

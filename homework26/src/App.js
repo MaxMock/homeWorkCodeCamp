@@ -74,7 +74,7 @@ class App extends Component {
               </Form>
               Total is ..... {this.state.total}
             </Card>
-        </div>
+        </div>  
     );
   }
 }

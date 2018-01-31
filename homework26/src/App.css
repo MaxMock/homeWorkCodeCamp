@@ -34,7 +34,25 @@
 .App-intro {
   font-size: large;
 }
-
+row{ 
+  background-color: rgb(43, 184, 250)
+}
+.StreamsFooter-item {
+  display: inline-block;
+  padding: 0 9px 0 9px;
+}
+ .StreamsFooter-list {
+  background:#f0f2f5;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: auto;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

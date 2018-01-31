@@ -1,0 +1,1 @@
+module.exports= {'host':'localhost','username':'root','password':'','database':'db3'};
