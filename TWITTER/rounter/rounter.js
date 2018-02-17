@@ -92,16 +92,23 @@ app.listen(3000)
 
 
 async function requestLogger (ctx, next) {
-  await next()
+
   console.log(`${ctx.method} ${ctx.status} ${ctx.path}`)
+  await next()
 }
   async function chacklogin (ctx, next) {
-    if(ctx.session.user!='')
+    if(ctx.path=='/auth/signin'){
+      
+       await next();
+    }
+    else{
+    if(ctx.session.user!=undefined)
     {
       await next()
     }else{
       ctx.status=401
       ctx.body={"erroe":"Unauthorized"}
     }
+  }
    
   }
